@@ -1,9 +1,14 @@
 import Image from "next/image";
+import LandingPage from "./LandingPage/page";
+import * as React from "react";
+import {NextUIProvider} from "@nextui-org/react";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      hello
-      </main> 
+    <NextUIProvider>
+    <LandingPage />
+  </NextUIProvider>
   );
 }
+
