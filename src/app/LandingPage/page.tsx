@@ -8,7 +8,6 @@ const LandingPage = () => {
     <div className="bg-gray-100 text-gray-900 min-h-screen min-h-screen">
       {/* Header Section */}
     <NavigationBar></NavigationBar>
-    <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
       {/* Main Content Section */}
       <main className="container mx-auto py-12 px-4">
         <div className="text-center mb-12">
@@ -19,7 +18,7 @@ const LandingPage = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="#upload" className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-bold text-xl hover:bg-yellow-600">
+          <a href="Upload" className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-bold text-xl hover:bg-yellow-600">
             Get Started
           </a>
         </div>
