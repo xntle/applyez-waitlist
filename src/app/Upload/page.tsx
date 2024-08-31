@@ -47,7 +47,7 @@ const Upload: React.FC = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex justify-center items-center">
+    <div className="min-h-screen bg-gradient-to-b from-pink-300 to-orange-200 flex justify-center items-center">
       <Card className="w-full max-w-lg p-6 bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-center mb-4">Upload Your Resume</h2>
         <div
