@@ -21,3 +21,4 @@ const PersonalityBar = () => {
 };
 
 export default PersonalityBar;
+
