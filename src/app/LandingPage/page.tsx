@@ -19,7 +19,7 @@ export default function LandingPage() {
             What Vibe is Your Resume Giving?
         </h1>
         <p className="mt-4 text-lg">
-            Upload your resume and we'll tell you how others really see you.
+            Upload your resume and we&apos;ll tell you how others really see you.
         </p>
         <Button as={Link} color="default" href="Upload" variant="flat"  className="mt-4 bg-red-600 text-bold text-white px-20 py-6 text-2xl rounded-full">
             Start
