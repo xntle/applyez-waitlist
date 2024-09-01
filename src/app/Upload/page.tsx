@@ -23,34 +23,36 @@ const Upload: React.FC = () => {
         setExtractedText(text);
   
         const personality = await analyzeResume(text);
-        setPersonalityType(personality);
+        setPersonalityType(personality as string | null); 
   
-        const matchedPersonality = personalitiesData.find(
-          (p) => p.type === personality
-        );
+        if (personality) {
+          const matchedPersonality = personalitiesData.find(
+            (p) => p.type === personality
+          );
   
-        if (matchedPersonality) {
-          setPersonalityInfo(matchedPersonality);
+          if (matchedPersonality) {
+            setPersonalityInfo(matchedPersonality);
   
-          // Send the matched personality data to the API route
-          const response = await fetch('/api/writeOutput', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(matchedPersonality),
-          });
+            // Send the matched personality data to the API route
+            const response = await fetch('/api/writeOutput', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(matchedPersonality),
+            });
   
-          if (response.ok) {
-            console.log('Personality data saved to output.json');
-            // Reroute to the result page after writing the file
-            router.push('/Result');
+            if (response.ok) {
+              console.log('Personality data saved to output.json');
+              // Reroute to the result page after writing the file
+              router.push('/Result');
+            } else {
+              const errorData = await response.json();
+              console.error('Failed to save personality data:', errorData);
+            }
           } else {
-            const errorData = await response.json();
-            console.error('Failed to save personality data:', errorData);
+            setError('Personality type not found in data.');
           }
-        } else {
-          setError('Personality type not found in data.');
         }
       } catch (err: any) {
         setError(err.message);
@@ -59,6 +61,8 @@ const Upload: React.FC = () => {
       setError('Please upload a valid PDF file.');
     }
   }, [router]);
+  
+  
   
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });

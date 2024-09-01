@@ -1,4 +1,4 @@
-const analyzeResume = async (resumeText: string) => {
+const analyzeResume = async (resumeText: string): Promise<string | null> => {
   try {
     const response = await fetch('/api/analyzeResume', {
       method: 'POST',
@@ -8,19 +8,14 @@ const analyzeResume = async (resumeText: string) => {
       body: JSON.stringify({ resumeText }),
     });
 
-    console.log('Response status:', response.status);
-    console.log('Response headers:', response.headers);
-
     if (!response.ok) {
-      const errorDetails = await response.json();
-      throw new Error(`Failed to analyze resume: ${errorDetails.message || 'Unknown error'}`);
+      throw new Error('Failed to analyze resume');
     }
 
     const data = await response.json();
-    console.log('Response data:', data);
-    return data.personalityType;
+    return data.personalityType ?? null; // Use nullish coalescing to ensure null is returned if undefined
   } catch (error) {
     console.error('Error analyzing resume:', error);
-    return null;
+    return null; // Return null in case of an error
   }
 };
