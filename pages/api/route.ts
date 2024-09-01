@@ -33,7 +33,7 @@ async function analyzeResume(resumeText: string) {
       max_tokens: 50, // Limit the response length to just output the personality type
     });
 
-    const personalityType = completion.choices[0].message.content.trim();
+    const personalityType = completion.choices?.[0]?.message?.content?.trim();
     console.log('Personality Type:', personalityType);
 
     return personalityType;
