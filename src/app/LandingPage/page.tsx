@@ -16,7 +16,7 @@ export default function LandingPage() {
       {/* Main Content */}
       <div className="relative z-10 text-center ">
         <h1 className="text-4xl font-bold text-gray-800">
-            What Vibe is Your LinkedIn Giving?
+            What Vibe is Your Resume Giving?
         </h1>
         <p className="mt-4 text-lg">
             Upload your resume and we'll tell you how others really see you.
@@ -27,6 +27,7 @@ export default function LandingPage() {
         <p className="mt-4 text-sm text-gray-600">
           Your resume will not be stored or shared.
         </p>
+        <p className="mt-4 text-sm text-blue-600">inspired by fide</p>
       </div>
     </div>
   );
