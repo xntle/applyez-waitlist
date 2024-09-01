@@ -3,6 +3,7 @@ import LandingPage from "./LandingPage/page";
 import * as React from "react";
 import {NextUIProvider} from "@nextui-org/react";
 import Link from "next/link";
+import WaitList from "./Waitlist/page";
 
 // import CoverLetterForm from './pages/coverletter'
 
@@ -10,14 +11,15 @@ import Link from "next/link";
 const Home: React.FC = () => {
   return (
     <NextUIProvider>
-      <LandingPage />
+      {/* <LandingPage />
       <div>
         <Link href="/coverletter">
           <button style={{ padding: "10px 20px", fontSize: "20px" }}>
             Generate Cover Letter
           </button>
         </Link>
-      </div>
+      </div> */}
+      <WaitList></WaitList>
     </NextUIProvider>
   );
 };

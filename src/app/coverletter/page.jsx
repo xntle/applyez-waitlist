@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { jsPDF } from "jspdf";
+import { saveAs } from "file-saver";
+import { Document, Packer, Paragraph, TextRun } from "docx";
 
 const CoverLetterForm = () => {
   const [jobDescription, setJobDescription] = useState("");
   const [resumeData, setResumeData] = useState("");
   const [coverLetter, setCoverLetter] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedCoverLetter, setEditedCoverLetter] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,11 +31,52 @@ const CoverLetterForm = () => {
 
       const result = await response.json();
       setCoverLetter(result.coverLetter);
+      setEditedCoverLetter(result.coverLetter);
     } catch (error) {
       console.error("Error generating cover letter:", error);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleDownloadPDF = () => {
+    const doc = new jsPDF();
+    doc.text(editedCoverLetter, 10, 10);
+    doc.save("cover_letter.pdf");
+  };
+
+  const handleDownloadDOCX = () => {
+    const doc = new Document({
+      sections: [
+        {
+          children: [new Paragraph({ children: [new TextRun(editedCoverLetter)] })],
+        },
+      ],
+    });
+
+    Packer.toBlob(doc).then((blob) => {
+      saveAs(blob, "cover_letter.docx");
+    });
+  };
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(editedCoverLetter).then(
+      () => {
+        alert("Cover letter copied to clipboard!");
+      },
+      (err) => {
+        console.error("Could not copy text: ", err);
+      }
+    );
+  };
+
+  const handleEditToggle = () => {
+    setIsEditing(!isEditing);
+  };
+
+  const handleSaveEdit = () => {
+    setCoverLetter(editedCoverLetter);
+    setIsEditing(false);
   };
 
   return (
@@ -80,7 +126,51 @@ const CoverLetterForm = () => {
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Generated Cover Letter</h2>
               {coverLetter ? (
                 <div className="prose text-gray-700">
-                  <p>{coverLetter}</p>
+                  {isEditing ? (
+                    <textarea
+                      value={editedCoverLetter}
+                      onChange={(e) => setEditedCoverLetter(e.target.value)}
+                      className="w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                      rows="10"
+                    />
+                  ) : (
+                    <p>{editedCoverLetter}</p>
+                  )}
+                  <div className="mt-4 flex space-x-2">
+                    {isEditing ? (
+                      <button
+                        onClick={handleSaveEdit}
+                        className="px-4 py-2 text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                      >
+                        Save
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleEditToggle}
+                        className="px-4 py-2 text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                      >
+                        Edit
+                      </button>
+                    )}
+                    <button
+                      onClick={handleDownloadPDF}
+                      className="px-4 py-2 text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    >
+                      Download as PDF
+                    </button>
+                    <button
+                      onClick={handleDownloadDOCX}
+                      className="px-4 py-2 text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    >
+                      Download as DOCX
+                    </button>
+                    <button
+                      onClick={handleCopyToClipboard}
+                      className="px-4 py-2 text-white bg-primary rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    >
+                      Copy to Clipboard
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <p className="text-gray-500">Your generated cover letter will appear here.</p>

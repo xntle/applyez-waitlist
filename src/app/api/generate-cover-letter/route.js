@@ -85,7 +85,10 @@ Output the cover letter in plain text format, interpreting the LaTeX-style comma
       coverLetter += chunk.choices[0]?.delta?.content || "";
     }
 
-    return NextResponse.json({ coverLetter });
+    // Process the cover letter to interpret LaTeX-style commands
+    const formattedCoverLetter = formatCoverLetter(coverLetter);
+
+    return NextResponse.json({ coverLetter: formattedCoverLetter });
   } catch (error) {
     console.error("Error generating cover letter:", error);
     return NextResponse.json(
@@ -93,4 +96,25 @@ Output the cover letter in plain text format, interpreting the LaTeX-style comma
       { status: 500 }
     );
   }
+}
+
+function formatCoverLetter(text) {
+  // Remove LaTeX document commands
+  text = text.replace(/\\begin{document}|\\end{document}/g, '');
+
+  // Replace \\ with newline
+  text = text.replace(/\\\\/g, '\n');
+
+  // Replace \vspace commands with newlines
+  text = text.replace(/\\vspace{\d+(?:\.\d+)?em}/g, '\n');
+
+  // Remove \noindent commands
+  text = text.replace(/\\noindent/g, '');
+
+
+  text = text.replace(/\\hfill/g, '    ');
+
+  text = text.trim().replace(/\n{3,}/g, '\n\n');
+
+  return text;
 }
