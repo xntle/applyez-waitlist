@@ -1,36 +1,36 @@
 {
-  "id": 0,
-  "type": "Strategist",
-  "explanation": "You're the person who has a 5-year plan for your 5-year plan. You can see 10 moves ahead, but somehow still forget where you put your keys.",
-  "imagesrc": "/strategist.svg",
+  "id": 2,
+  "type": "Techie",
+  "explanation": "You're the go-to person for anything with a plug or a code. You love solving problems—especially the ones you created while trying to 'improve' things.",
+  "imagesrc": "/techie.svg",
   "detail": {
-    "dream_about": "A world where everyone just follows the plan.",
-    "hates": "People who 'wing it' and somehow still succeed.",
-    "most_likely_to": "Have a backup plan for their backup plan.",
-    "motto": "Failing to plan is planning to fail."
+    "dream_about": "A day when all code compiles on the first try.",
+    "hates": "Non-techies who say, 'Can't you just make it work?'",
+    "most_likely_to": "Spend more time automating a task than the task itself takes.",
+    "motto": "There's a bug in the system... oh wait, that's my code."
   },
   "celebrities": [
     {
-      "name": "Elon Musk",
-      "imagesrc": "/elon-musk.svg"
+      "name": "Bill Gates",
+      "imagesrc": "/bill-gates.svg"
     },
     {
-      "name": "Sheryl Sandberg",
-      "imagesrc": "/sheryl-sandberg.svg"
+      "name": "Mark Zuckerberg",
+      "imagesrc": "/mark-zuckerberg.svg"
     },
     {
-      "name": "Warren Buffett",
-      "imagesrc": "/warren-buffett.svg"
+      "name": "Steve Jobs",
+      "imagesrc": "/steve-jobs.svg"
     }
   ],
   "alternate_career_path": {
-    "title": "Escape Room Designer",
-    "desc": "If anyone can create puzzles that require overthinking and strategic maneuvering, it's you. Just make sure your players can actually escape!",
-    "imagesrc": "/escape-room-designer.svg"
+    "title": "Robot Therapist",
+    "desc": "Because even robots need someone to talk to after dealing with human errors all day.",
+    "imagesrc": "/robot-therapist.svg"
   },
   "works_well_with": {
-    "personality_type": "Organizer",
-    "explanation": "Your meticulous planning pairs perfectly with the Organizer's love for execution. Together, you can strategize and execute flawlessly.",
-    "imagesrc": "/organizer.svg"
+    "personality_type": "Creator",
+    "explanation": "While the Creator dreams it up, you're the one who makes sure the lights stay on and the wheels keep turning.",
+    "imagesrc": "/creator.svg"
   }
 }
