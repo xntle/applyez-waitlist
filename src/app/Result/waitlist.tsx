@@ -51,16 +51,16 @@ const Waitlist = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button
-            as="a"
-            href="/waitlist-page" // Replace with the actual link to your waitlist page
-            color="default"
-            auto
-            rounded
-            className="bg-white text-black px-8 py-4"
-          >
-            Join the Waitlist
-          </Button>
+        <Button
+  as="a"
+  href="/waitlist-page"
+  color="default"
+  style={{ width: 'auto', padding: '1rem 2rem' }} // Manually set width and padding
+  className="bg-white text-black"
+>
+  Join the Waitlist
+</Button>
+
         </div>
       </div>
     </section>

@@ -15,18 +15,12 @@ export default async function Header() {
 
     return (
       <div className="bg-gradient-to-b from-green-600 to-green-500 flex flex-col items-center justify-center text-white h-screen">
-        <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
-          <h3 className="text-2xl font-bold text-black-500">ApplyEZ</h3>
-          <Button
-            as={Link}
-            color="default"
-            href="#"
-            variant="flat"
-            css={{ backgroundColor: "white", color: "#000" }}
-          >
-            Sign Up For Our Waitlist
-          </Button>
-        </div>
+      <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
+        <h3 className="text-2xl font-bold text-black-500">ApplyEZ</h3>
+        <Button as={Link} color="default" href="#" variant="flat" style={{ backgroundColor: 'white', color: '#000' }}>
+          Join the Waitlist
+        </Button>
+      </div>
 
         <div className="text-center mt-20">
           <img
