@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       const data = req.body;
 
       // Construct the path to the output.json file
-      const filePath = path.join(process.cwd(), 'src/app/Upload/output.json');
+      const filePath = path.join(process.cwd(), '/src/app/Upload/output.json');
 
       // Write the data to output.json
       await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');

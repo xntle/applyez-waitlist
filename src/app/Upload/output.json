@@ -1,0 +1,36 @@
+{
+  "id": 0,
+  "type": "Strategist",
+  "explanation": "You're the person who has a 5-year plan for your 5-year plan. You can see 10 moves ahead, but somehow still forget where you put your keys.",
+  "imagesrc": "/strategist.svg",
+  "detail": {
+    "dream_about": "A world where everyone just follows the plan.",
+    "hates": "People who 'wing it' and somehow still succeed.",
+    "most_likely_to": "Have a backup plan for their backup plan.",
+    "motto": "Failing to plan is planning to fail."
+  },
+  "celebrities": [
+    {
+      "name": "Elon Musk",
+      "imagesrc": "/elon-musk.svg"
+    },
+    {
+      "name": "Sheryl Sandberg",
+      "imagesrc": "/sheryl-sandberg.svg"
+    },
+    {
+      "name": "Warren Buffett",
+      "imagesrc": "/warren-buffett.svg"
+    }
+  ],
+  "alternate_career_path": {
+    "title": "Escape Room Designer",
+    "desc": "If anyone can create puzzles that require overthinking and strategic maneuvering, it's you. Just make sure your players can actually escape!",
+    "imagesrc": "/escape-room-designer.svg"
+  },
+  "works_well_with": {
+    "personality_type": "Organizer",
+    "explanation": "Your meticulous planning pairs perfectly with the Organizer's love for execution. Together, you can strategize and execute flawlessly.",
+    "imagesrc": "/organizer.svg"
+  }
+}
