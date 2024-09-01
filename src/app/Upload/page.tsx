@@ -5,7 +5,7 @@ import { useDropzone } from 'react-dropzone';
 import { Button, Card } from '@nextui-org/react';
 import { useRouter } from 'next/navigation'; // Updated for Next.js 13+
 import pdfToText from 'react-pdftotext';
-import analyzeResume from '../api/route';
+import analyzeResume from '../../../pages/api/route';
 import personalitiesData from './personalities.json';
 
 const Upload: React.FC = () => {
