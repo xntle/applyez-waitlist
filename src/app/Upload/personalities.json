@@ -1,0 +1,290 @@
+[
+  {
+    "id": 0,
+    "type": "Strategist",
+    "explanation": "You're the person who has a 5-year plan for your 5-year plan. You can see 10 moves ahead, but somehow still forget where you put your keys.",
+    "imagesrc": "/strategist.svg",
+    "detail": {
+      "dream_about": "A world where everyone just follows the plan.",
+      "hates": "People who 'wing it' and somehow still succeed.",
+      "most_likely_to": "Have a backup plan for their backup plan.",
+      "motto": "Failing to plan is planning to fail."
+    },
+    "celebrities": [
+      {
+        "name": "Elon Musk",
+        "imagesrc": "/elon-musk.svg"
+      },
+      {
+        "name": "Sheryl Sandberg",
+        "imagesrc": "/sheryl-sandberg.svg"
+      },
+      {
+        "name": "Warren Buffett",
+        "imagesrc": "/warren-buffett.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Escape Room Designer",
+      "desc": "If anyone can create puzzles that require overthinking and strategic maneuvering, it's you. Just make sure your players can actually escape!",
+      "imagesrc": "/escape-room-designer.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Organizer",
+      "explanation": "Your meticulous planning pairs perfectly with the Organizer's love for execution. Together, you can strategize and execute flawlessly.",
+      "imagesrc": "/organizer.svg"
+    }
+  },
+  {
+    "id": 1,
+    "type": "Creator",
+    "explanation": "You're constantly coming up with ideas, most of which are way ahead of their time (and maybe a little impractical). Your brainstorming sessions are legendary, but so are your half-finished projects.",
+    "imagesrc": "/creator.svg",
+    "detail": {
+      "dream_about": "A world where imagination is the only limit.",
+      "hates": "People who ask 'but how does it work?'",
+      "most_likely_to": "Start a project at 2 AM because inspiration struck.",
+      "motto": "Why do it the usual way when you can do it your way?"
+    },
+    "celebrities": [
+      {
+        "name": "J.K. Rowling",
+        "imagesrc": "/jk-rowling.svg"
+      },
+      {
+        "name": "Quentin Tarantino",
+        "imagesrc": "/quentin-tarantino.svg"
+      },
+      {
+        "name": "Beyoncé",
+        "imagesrc": "/beyonce.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Fantasy World Architect",
+      "desc": "You're already creating worlds in your mind, might as well get paid for it. (Dragons not included).",
+      "imagesrc": "/fantasy-world-architect.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Techie",
+      "explanation": "Your ideas are out of this world, and the Techie can figure out how to bring them into this one.",
+      "imagesrc": "/techie.svg"
+    }
+  },
+  {
+    "id": 2,
+    "type": "Techie",
+    "explanation": "You're the go-to person for anything with a plug or a code. You love solving problems—especially the ones you created while trying to 'improve' things.",
+    "imagesrc": "/techie.svg",
+    "detail": {
+      "dream_about": "A day when all code compiles on the first try.",
+      "hates": "Non-techies who say, 'Can't you just make it work?'",
+      "most_likely_to": "Spend more time automating a task than the task itself takes.",
+      "motto": "There's a bug in the system... oh wait, that's my code."
+    },
+    "celebrities": [
+      {
+        "name": "Bill Gates",
+        "imagesrc": "/bill-gates.svg"
+      },
+      {
+        "name": "Mark Zuckerberg",
+        "imagesrc": "/mark-zuckerberg.svg"
+      },
+      {
+        "name": "Steve Jobs",
+        "imagesrc": "/steve-jobs.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Robot Therapist",
+      "desc": "Because even robots need someone to talk to after dealing with human errors all day.",
+      "imagesrc": "/robot-therapist.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Creator",
+      "explanation": "While the Creator dreams it up, you're the one who makes sure the lights stay on and the wheels keep turning.",
+      "imagesrc": "/creator.svg"
+    }
+  },
+  {
+    "id": 3,
+    "type": "Leader",
+    "explanation": "You lead by example, often into the fray. Your confidence is your superpower, but your team knows to duck when you start making 'gut decisions.'",
+    "imagesrc": "/leader.svg",
+    "detail": {
+      "dream_about": "Rallying the troops for one last big push.",
+      "hates": "People who say 'let’s wait and see.'",
+      "most_likely_to": "Give a rousing speech that may or may not be relevant.",
+      "motto": "Lead, follow, or get out of the way."
+    },
+    "celebrities": [
+      {
+        "name": "Barack Obama",
+        "imagesrc": "/barack-obama.svg"
+      },
+      {
+        "name": "Oprah Winfrey",
+        "imagesrc": "/oprah-winfrey.svg"
+      },
+      {
+        "name": "Angela Merkel",
+        "imagesrc": "/angela-merkel.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Galactic Emperor",
+      "desc": "Why stop at leading a team when you could rule an entire galaxy? Just remember: with great power comes great paperwork.",
+      "imagesrc": "/galactic-emperor.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Networker",
+      "explanation": "Your leadership and the Networker's ability to connect with everyone makes for a dynamic, unstoppable team.",
+      "imagesrc": "/networker.svg"
+    }
+  },
+  {
+    "id": 4,
+    "type": "Networker",
+    "explanation": "You know everyone, and everyone knows you. You're the social glue of any group, but sometimes you forget what you were actually supposed to be doing.",
+    "imagesrc": "/networker.svg",
+    "detail": {
+      "dream_about": "Attending the most exclusive parties, with an invite in hand.",
+      "hates": "People who don't know how to 'work the room.'",
+      "most_likely_to": "Turn a 5-minute conversation into a 50-minute one.",
+      "motto": "It’s not what you know, it’s who you know."
+    },
+    "celebrities": [
+      {
+        "name": "Taylor Swift",
+        "imagesrc": "/taylor-swift.svg"
+      },
+      {
+        "name": "Richard Branson",
+        "imagesrc": "/richard-branson.svg"
+      },
+      {
+        "name": "Kim Kardashian",
+        "imagesrc": "/kim-kardashian.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Professional Party Crasher",
+      "desc": "Why wait for an invite when you can make every party better just by showing up?",
+      "imagesrc": "/party-crasher.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Leader",
+      "explanation": "The Leader leads, and you connect the dots. Together, you make things happen.",
+      "imagesrc": "/leader.svg"
+    }
+  },
+  {
+    "id": 5,
+    "type": "Organizer",
+    "explanation": "You have a place for everything, and everything is in its place. Your spreadsheets have spreadsheets, but your friends know to call you when they need a rescue mission.",
+    "imagesrc": "/organizer.svg",
+    "detail": {
+      "dream_about": "A world where chaos is just a myth.",
+      "hates": "People who don’t respect the color-coding system.",
+      "most_likely_to": "Have a labeled drawer for everything, including labeled drawers.",
+      "motto": "If it’s not organized, it’s not happening."
+    },
+    "celebrities": [
+      {
+        "name": "Marie Kondo",
+        "imagesrc": "/marie-kondo.svg"
+      },
+      {
+        "name": "Jeff Bezos",
+        "imagesrc": "/jeff-bezos.svg"
+      },
+      {
+        "name": "Martha Stewart",
+        "imagesrc": "/martha-stewart.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Sock Drawer Consultant",
+      "desc": "Because even the most chaotic sock drawers can benefit from your organizational prowess.",
+      "imagesrc": "/sock-drawer-consultant.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Strategist",
+      "explanation": "The Strategist plans, and you execute. Together, you're a force of nature.",
+      "imagesrc": "/strategist.svg"
+    }
+  },
+  {
+    "id": 6,
+    "type": "Adventurer",
+    "explanation": "You see life as one big adventure, and every day is a new opportunity to explore. Of course, your friends know to keep an eye on you, because sometimes your adventures need a bit of rescuing.",
+    "imagesrc": "/adventurer.svg",
+    "detail": {
+      "dream_about": "Climbing the next mountain (literally or metaphorically).",
+      "hates": "Being told to 'stay in one place.'",
+      "most_likely_to": "Book a one-way ticket to somewhere they've never heard of.",
+      "motto": "Adventure is out there—so go find it!"
+    },
+    "celebrities": [
+      {
+        "name": "Anthony Bourdain",
+        "imagesrc": "/anthony-bourdain.svg"
+      },
+      {
+        "name": "Bear Grylls",
+        "imagesrc": "/bear-grylls.svg"
+      },
+      {
+        "name": "Amelia Earhart",
+        "imagesrc": "/amelia-earhart.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Extreme Couponer",
+      "desc": "Because getting 90% off with a stack of coupons is just as thrilling as scaling Everest, right?",
+      "imagesrc": "/extreme-couponer.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Caregiver",
+      "explanation": "The Caregiver keeps you safe while you explore the unknown. It’s a partnership that balances risk with care.",
+      "imagesrc": "/caregiver.svg"
+    }
+  },
+  {
+    "id": 7,
+    "type": "Caregiver",
+    "explanation": "You have a heart as big as your to-do list. You're always there to help, even when people don’t ask for it. But hey, who’s going to argue with free cookies?",
+    "imagesrc": "/caregiver.svg",
+    "detail": {
+      "dream_about": "A world where everyone is happy and healthy.",
+      "hates": "People who refuse to accept help (especially when they need it).",
+      "most_likely_to": "Show up with a casserole at the first sign of trouble.",
+      "motto": "A little kindness goes a long way."
+    },
+    "celebrities": [
+      {
+        "name": "Mother Teresa",
+        "imagesrc": "/mother-teresa.svg"
+      },
+      {
+        "name": "Ellen DeGeneres",
+        "imagesrc": "/ellen-degeneres.svg"
+      },
+      {
+        "name": "Princess Diana",
+        "imagesrc": "/princess-diana.svg"
+      }
+    ],
+    "alternate_career_path": {
+      "title": "Professional Cuddler",
+      "desc": "Why not get paid for those hugs you’re always giving? You’ve got the warmth, now bring the snuggles.",
+      "imagesrc": "/professional-cuddler.svg"
+    },
+    "works_well_with": {
+      "personality_type": "Adventurer",
+      "explanation": "You keep the Adventurer safe and sound while they tackle the world’s challenges. Together, you balance excitement with care.",
+      "imagesrc": "/adventurer.svg"
+    }
+  }
+]

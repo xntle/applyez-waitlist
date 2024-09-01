@@ -3,17 +3,9 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nex
 
 export default function NavigationBar() {
   return (
-    <Navbar className="bg-transparent">
-      <NavbarBrand>
-      <h1 className="text-3xl font-bold">applyEZ</h1>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-6" justify="center">
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-             Sign Up For Our Waitlist
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+    <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
+    <h3 className="text-2xl font-bold text-orange-500">fide</h3>
+    <img src="/images/app-store.png" alt="Download on the App Store" className="w-32" />
+  </div>
   );
 }
