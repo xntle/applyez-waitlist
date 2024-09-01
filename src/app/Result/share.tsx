@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Link } from "@nextui-org/react";
+import { Button, Link, Image } from "@nextui-org/react";
 import { promises as fs } from "fs";
 
 export default async function Share() {
@@ -17,7 +17,7 @@ export default async function Share() {
         <div className="bg-gradient-to-b from-orange-500 to-black h-screen flex flex-col items-center justify-center">
 
         <div className="text-center mt-20">
-          <img
+          <Image
             src={output.imagesrc} 
             className="w-40 h-40 bg-white rounded-full mx-auto"
           />
@@ -25,7 +25,7 @@ export default async function Share() {
             Take a screenshot and share!
           </div>
           <h2 className="text-4xl text-white font-bold mt-4">
-            I'm a {output.type}!
+            I&apos;m a {output.type}!
           </h2>
           <p className="mt-4 text-lg text-white max-w-xl mx-auto">
             {output.explanation}

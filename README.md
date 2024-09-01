@@ -1,5 +1,3 @@
-Here's a basic `README.md` template for your personality quiz project based on resumes. You can customize it further to fit your specific project details.
-
 # Personality Quiz Based on Resumes
 
 ## Overview

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Button, Link } from "@nextui-org/react";
+import { Button, Link , Image} from "@nextui-org/react";
 import { promises as fs } from "fs";
 
 export default async function Teamwork() {
@@ -19,7 +19,7 @@ export default async function Teamwork() {
 <div className="text-center text-white">
   <h3 className="text-3xl font-bold mb-10">{output.type}s work well with...</h3>
   <div className="flex flex-col items-center">
-    <img
+    <Image
       src={output.works_well_with.imagesrc}
       alt={output.works_well_with.personality_type}
       className="w-40 h-40 rounded-full"

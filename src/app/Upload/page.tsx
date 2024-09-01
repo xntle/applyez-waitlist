@@ -78,7 +78,7 @@ const Upload: React.FC = () => {
             <p className="text-blue-500">Drop the files here...</p>
           ) : (
             <p className="text-gray-500">
-              Drag 'n' drop your resume here, or click to select a PDF file
+              Drag & drop your resume here, or click to select a PDF file
             </p>
           )}
         </div>
