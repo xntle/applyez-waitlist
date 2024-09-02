@@ -1,6 +1,6 @@
 import React from 'react';
-import personalityTypes from './personalities.json';
-import PersonalityBar from './personalityBar';
+// import personalityTypes from './personalities.json';
+// import PersonalityBar from './personalityBar';
 import NavigationBar from '../Navbar/page';
 
 const LandingPage = () => {
