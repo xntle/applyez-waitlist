@@ -53,7 +53,7 @@ const Waitlist = () => {
         <div className="text-center mt-12">
         <Button
   as="a"
-  href="/waitlist-page"
+  href="/Waitlist"
   color="default"
   style={{ width: 'auto', padding: '1rem 2rem' }} // Manually set width and padding
   className="bg-white text-black"
