@@ -156,7 +156,7 @@ export default function Component() {
             {
               title: "Resume Vibe Analyzer",
               description:
-                "Analyze the tone and vibe of your resume to ensure it reflects the right personality and matches the job you're targeting.",
+                "Analyze the tone and vibe of your resume to ensure it reflects the right personality and matches the job you&apos;re targeting.",
             },
           ].map((feature, index) => (
             <motion.div
