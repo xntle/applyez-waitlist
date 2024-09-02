@@ -79,7 +79,7 @@ const OtherTypes = () => {
   return (
     <div className="bg-gradient-to-b from-pink-500 to-red-500 flex flex-col items-center justify-center h-screen">
       <div className="text-center text-white">
-        <h3 className="text-3xl font-bold mb-10">Other Fide Types</h3>
+        <h3 className="text-3xl font-bold mb-10">Other Types</h3>
         <div className="relative w-full max-w-7xl mx-auto">
           <div className="flex space-x-8 overflow-hidden">
             {personalityTypes.slice(currentIndex, currentIndex + 5).map((type, index) => (
