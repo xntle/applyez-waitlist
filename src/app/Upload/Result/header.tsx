@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = ({ personalityInfo }) => {
     <div className="bg-gradient-to-b from-green-600 to-green-500 flex flex-col items-center justify-center text-white h-screen">
       <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
         <h3 className="text-2xl font-bold text-black-500">ApplyEZ</h3>
-        <Button as={Link} color="default" href="#" variant="flat" style={{ backgroundColor: 'white', color: '#000' }}>
+        <Button as={Link} color="default" href="Waitlist" variant="flat" style={{ backgroundColor: 'white', color: '#000' }}>
           Join the Waitlist
         </Button>
       </div>

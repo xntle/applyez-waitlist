@@ -4,25 +4,22 @@ import { motion } from "framer-motion";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/firebaseconfig";
 
-// Input component
-const Input = (props) => {
-  return (
-    <input {...props} className={`px-3 py-2 rounded-md ${props.className}`} />
-  );
-};
+// Reusable Input component
+const Input = (props) => (
+  <input {...props} className={`px-3 py-2 rounded-md ${props.className}`} />
+);
 
-// Button component
-const Button = ({ children, className, ...props }) => {
-  return (
-    <button
-      className={`px-4 py-2 rounded-md font-semibold ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
+// Reusable Button component
+const Button = ({ children, className, ...props }) => (
+  <button
+    className={`px-4 py-2 rounded-md font-semibold ${className}`}
+    {...props}
+  >
+    {children}
+  </button>
+);
 
+// Main component
 export default function Component() {
   const [email, setEmail] = useState("");
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -44,8 +41,8 @@ export default function Component() {
     try {
       // Add email to Firestore
       await addDoc(collection(db, "waitlist"), {
-        email: email,
-        timestamp: new Date()
+        email,
+        timestamp: new Date(),
       });
 
       console.log("Email added to waitlist:", email);
@@ -56,6 +53,29 @@ export default function Component() {
       setSubmitStatus("error");
     }
   };
+
+  const features = [
+    {
+      title: "ATS-Friendly Resume Generator",
+      description:
+        "Optimize your resume for Applicant Tracking Systems (ATS) to ensure it gets noticed by recruiters.",
+    },
+    {
+      title: "AI-Powered Cover Letter Generator",
+      description:
+        "Generate tailored cover letters that align with job descriptions, showcasing your unique strengths.",
+    },
+    {
+      title: "Application Tracker",
+      description:
+        "Manage your job applications with ease, track progress, and never miss an opportunity.",
+    },
+    {
+      title: "Resume Vibe Analyzer",
+      description:
+        "Analyze the tone and vibe of your resume to ensure it reflects the right personality and matches the job you're targeting.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden flex flex-col">
@@ -102,7 +122,7 @@ export default function Component() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Be the first to experience our ATS friendly resume generator, cover
+          Be the first to experience our ATS-friendly resume generator, cover
           letter generator, and personality tester.
         </motion.p>
         <motion.form
@@ -136,29 +156,9 @@ export default function Component() {
             <p className="mt-2 text-red-500">Error joining the waitlist. Please try again.</p>
           )}
         </motion.form>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow">
-          {[
-            {
-              title: "ATS-Friendly Resume Generator",
-              description:
-                "Optimize your resume for Applicant Tracking Systems (ATS) to ensure it gets noticed by recruiters.",
-            },
-            {
-              title: "AI-Powered Cover Letter Generator",
-              description:
-                "Generate tailored cover letters that align with job descriptions, showcasing your unique strengths.",
-            },
-            {
-              title: "Application Tracker",
-              description:
-                "Manage your job applications with ease, track progress, and never miss an opportunity.",
-            },
-            {
-              title: "Resume Vibe Analyzer",
-              description:
-                "Analyze the tone and vibe of your resume to ensure it reflects the right personality and matches the job you&apos;re targeting.",
-            },
-          ].map((feature, index) => (
+          {features.map((feature, index) => (
             <motion.div
               key={index}
               className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg p-6 shadow-lg"
