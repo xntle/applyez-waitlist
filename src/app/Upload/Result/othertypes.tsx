@@ -1,6 +1,6 @@
-"use client"
+'use client';
 import React, { useState } from "react";
-import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const OtherTypes = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,20 +80,25 @@ const OtherTypes = () => {
     <div className="bg-gradient-to-b from-pink-500 to-red-500 flex flex-col items-center justify-center h-screen">
       <div className="text-center text-white">
         <h3 className="text-3xl font-bold mb-10">Other Types</h3>
-        <div className="relative w-full max-w-7xl mx-auto">
-          <div className="flex space-x-8 overflow-hidden">
-            {personalityTypes.slice(currentIndex, currentIndex + 5).map((type, index) => (
+        <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
+          <motion.div
+            className="flex space-x-8"
+            initial={{ x: 0 }}
+            animate={{ x: `-${currentIndex * 20}%` }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            {personalityTypes.map((type, index) => (
               <div className="text-center w-1/5 flex-shrink-0" key={index}>
                 <img
                   src={type.imagesrc}
                   alt={type.type}
-                  className="w-40 h-40 rounded-full mx-auto"
+                  className="w-40 h-40 rounded-full mx-auto object-cover"
                 />
                 <p className="mt-4 text-xl font-semibold">{type.type}</p>
                 <p className="mt-2 text-sm">{type.explanation}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
           {/* Arrows for navigation */}
           <div className="flex justify-between items-center absolute w-full bottom-0 px-4">
             <button
