@@ -20,10 +20,12 @@ const Upload: React.FC = () => {
   const [personalityType, setPersonalityType] = useState<string | null>(null);
   const [personalityInfo, setPersonalityInfo] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false); // Loading state
 
   const onDrop = useCallback(async (acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
     if (file && file.type === "application/pdf") {
+      setLoading(true); // Start loading
       try {
         const text = await extractTextFromPDF(file);
         setExtractedText(text);
@@ -44,6 +46,8 @@ const Upload: React.FC = () => {
         }
       } catch (err: any) {
         setError(err.message);
+      } finally {
+        setLoading(false); // Stop loading
       }
     } else {
       setError("Please upload a valid PDF file.");
@@ -54,7 +58,12 @@ const Upload: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-300 to-orange-200 flex justify-center items-center">
-      {personalityInfo ? (
+      {loading ? (
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="w-16 h-16 border-4 border-dashed border-gray-300 rounded-full animate-spin"></div>
+          <p className="text-white text-lg font-bold">Processing your resume...</p>
+        </div>
+      ) : personalityInfo ? (
         <div className="w-full h-full bg-gradient-to-b from-green-600 to-green-500 text-white">
           {/* Header Component */}
           <Header personalityInfo={personalityInfo} />
@@ -62,10 +71,9 @@ const Upload: React.FC = () => {
           <Celebrities personalityInfo={personalityInfo} />
           <Career personalityInfo={personalityInfo} />
           <OtherTypes />
-          <Teamwork personalityInfo={personalityInfo} />    
-            <Share personalityInfo={personalityInfo} />
-            <Waitlist />
-
+          <Teamwork personalityInfo={personalityInfo} />
+          <Share personalityInfo={personalityInfo} />
+          <Waitlist />
         </div>
       ) : (
         <Card className="w-full max-w-lg p-6 bg-white shadow-lg rounded-lg">
