@@ -1,14 +1,26 @@
 import React from "react";
-import { Link, Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
+
 
 export default function LandingPage() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-pink-300 to-orange-200 flex flex-col justify-center items-center">
       <div className="absolute top-0 left-0 w-full p-4 flex justify-between items-center">
         <h3 className="text-2xl font-bold text-black-500">ApplyEZ</h3>
-        <Button as={Link} color="default" href="/Waitlist" variant="flat" style={{ backgroundColor: 'white', color: '#000' }}>
-          Join The Waitlist
-        </Button>
+        <div className="flex space-x-2">
+          <Button 
+            as={Link}
+            href="/Coverletter"
+            color="default"
+            variant="flat"
+            style={{ backgroundColor: 'white', color: '#000' }}
+          >
+            Cover Letter
+          </Button>
+          <Button as={Link} color="default" href="/Waitlist" variant="flat" style={{ backgroundColor: 'white', color: '#000' }}>
+            Join The Waitlist
+          </Button>
+        </div>
       </div>
 
 
