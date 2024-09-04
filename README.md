@@ -74,14 +74,3 @@ The quiz matches users to the following personality types:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-For any questions or feedback, feel free to reach out at [your.email@example.com](mailto:your.email@example.com).
-```
-
-### Customization Tips:
-- Replace `https://github.com/yourusername/personality-quiz.git` with your actual repository URL.
-- Update the contact email and any other placeholders with your actual information.
-- Include any additional sections or tools relevant to your project.
-
-This `README.md` file should provide a clear and concise overview of your project, guiding users on how to install, run, and contribute to it.
