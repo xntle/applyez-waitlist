@@ -1,7 +1,13 @@
+
 # Personality Quiz Based on Resumes
+
+https://github.com/user-attachments/assets/ca632c09-beda-406a-937a-52aa30d0b3ab
+
 
 ## Overview
 This project is a fun and interactive personality quiz that determines what kind of person you are based on the information provided in a resume. The quiz analyzes different sections of a resume, such as skills, experiences, and education, to match users with one of several predefined personality types.
+
+What's your type?
 
 ## Features
 - **Resume Analysis**: Extracts key information from resumes to determine personality types.
